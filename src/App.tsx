@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
+import { Container } from '@material-ui/core'
+
+import AppHeader from './AppHeader'
+import AppDrawer from './AppDrawer'
+import ScrollTop from './ScrollTop'
+import './App.css'
+
+const App: React.FC = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader onMenuOpen={() => setDrawerOpen(true)} />
+      <AppDrawer open={drawerOpen} toggle={setDrawerOpen} />
+      <ScrollTop />
+      <Container>
+        {[...new Array(12)].map(() => (
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
+            magna, vel scelerisque nisl consectetur et. Cras mattis consectetur
+            purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
+            egestas eget quam. Morbi leo risus, porta ac consectetur ac,
+            vestibulum at eros. Praesent commodo cursus magna, vel scelerisque
+            nisl consectetur et.
+          </p>
+        ))}
+      </Container>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
