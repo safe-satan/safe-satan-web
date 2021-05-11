@@ -4,11 +4,15 @@
     "text": "About SafeSeal"
   },
   {
+    "url": "#tokenomics",
+    "text": "Tokenomics"
+  },
+  {
     "url": "#whitepaper",
     "text": "Whitepaper"
   },
   {
-    "url": "https://exchange.pancakeswap.finance/#/swap?outputCurrency=",
+    "url": "https://exchange.pancakeswap.finance/#/swap?outputCurrency={contract}",
     "text": "Buy on PancakeSwap"
   }
 ]

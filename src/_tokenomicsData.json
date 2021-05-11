@@ -1,0 +1,25 @@
+{
+  "supply": "1T",
+  "split": [
+    {
+      "color": "#8D3B72",
+      "title": "Burn",
+      "value": 40
+    },
+    {
+      "color": "#D3E8FB",
+      "title": "Two",
+      "value": 15
+    },
+    {
+      "color": "#2D3319",
+      "title": "Three",
+      "value": 20
+    },
+    {
+      "color": "#F2C57C",
+      "title": "Four",
+      "value": 15
+    }
+  ]
+}
