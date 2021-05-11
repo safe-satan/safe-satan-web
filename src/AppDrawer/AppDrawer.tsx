@@ -11,7 +11,7 @@ import {
   makeStyles,
 } from '@material-ui/core'
 
-import img from './seal-silhouette-purple.png'
+import img from '../images/seal-silhouette-purple.png'
 import socialLinks from '../_socialLinks'
 import links from '../_drawerLinks.json'
 

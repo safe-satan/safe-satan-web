@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, makeStyles } from '@material-ui/core'
-import heroImage from './seal.png'
+import heroImage from '../images/seal-hero.jpg'
 import Countdown from '../Countdown';
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
