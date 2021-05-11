@@ -10,13 +10,11 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     margin: `${spacing(4)}px auto 0`,
     width: '80vw',
     maxWidth: '1080px',
+    minHeight: '360px',
     opacity: 0,
     transition: `opacity ${duration}ms ease-in-out`,
     [breakpoints.down('xs')]: {
       margin: `${spacing(4)}px ${spacing(2)}px 0`,
-    },
-    '&:nth-of-type(2)': {
-      backgroundColor: palette.primary.main,
     },
   },
   entered: { opacity: 1 },

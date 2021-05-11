@@ -14,5 +14,9 @@
   {
     "url": "https://exchange.pancakeswap.finance/#/swap?outputCurrency={contract}",
     "text": "Buy on PancakeSwap"
+  },
+  {
+    "url": "https://charts.bogged.finance/?token={contract}",
+    "text": "View Chart"
   }
 ]
