@@ -16,15 +16,16 @@ import sealsSwimming from '../images/seals-swimming.png'
 
 import Section from '../Section'
 
-const imgs = [sealsSwimming, sealApproval, twoSeals];
+const imgs = [sealsSwimming, sealApproval, twoSeals]
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
     display: 'flex',
+    alignItems: 'center',
 
     [breakpoints.down('sm')]: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   cards: {
     display: 'flex',
@@ -35,35 +36,35 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     },
     [breakpoints.down('xs')]: {
       flexDirection: 'column',
-    }
+    },
   },
   card: {
     maxWidth: '300px',
     margin: spacing(2),
     animation: '$slide-in 600ms ease-out',
     [breakpoints.down('sm')]: {
-      width: '50%'
+      width: '50%',
     },
     [breakpoints.down('xs')]: {
       flexDirection: 'column',
-      width: '100%'
-    }
+      width: '100%',
+    },
   },
   '@keyframes slide-in': {
     from: {
-      transform: 'translateY(-100%)'
+      transform: 'translateY(-100%)',
     },
     to: {
-      transform: 'translateY(0)'
-    }
-  }
+      transform: 'translateY(0)',
+    },
+  },
 }))
 
 const { cards, split } = data
 
 const SectionTokenomics: React.FC = () => {
   const [selected, setSelected] = useState(-1)
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <Section id="tokenomics" title="Tokenomics">
@@ -83,7 +84,11 @@ const SectionTokenomics: React.FC = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     {title}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
                     {subtext}
                   </Typography>
                 </CardContent>
