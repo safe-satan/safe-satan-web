@@ -1,4 +1,17 @@
-# View it live [here](http://wack-overflow.github.io/safe-seal-web)
+# [View the site live here](http://wack-overflow.github.io/safe-seal-web)
+
+- Site deployment is done with the `yarn deploy` script
+
+# Modifying Data
+
+- A non-developer can relatively easily update the important data about this token with the following files:
+
+  - `_countdownData.json` - The count down type and date shown on the hero
+  - `_drawerLinks.json` - The links in the drawer
+  - `_socialLinks.json` - The social links in the footer
+  - `_tokenContract.json` - Add the contract here for the pancake swap links to work
+  - `_tokenomicsData.json` - Data that populates the donut chart in the tokenomics section
+  - `/SectionAbout/SectionAbout.tsx` - Update the "About" section
 
 # Getting Started with Create React App
 
