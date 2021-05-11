@@ -3,6 +3,7 @@ import { Box, Container, makeStyles, Typography } from '@material-ui/core'
 import Countdown from 'react-countdown'
 import countdownData from '../_countdownData.json'
 import BuyButton from '../BuyButton'
+import heroImage from './seal.png'
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   root: {
@@ -47,7 +48,7 @@ const SectionHero: React.FC = () => {
   const classes = useStyles()
   return (
     <Container id="hero" className={classes.root}>
-      <img src="/img/seal.png" alt="" className={classes.heroImage} />
+      <img src={heroImage} alt="" className={classes.heroImage} />
       <Box
         className={classes.overlay}
         display="flex"
