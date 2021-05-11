@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Link, makeStyles } from '@material-ui/core'
+import { Box, IconButton, makeStyles } from '@material-ui/core'
 
 import links from '../_socialLinks'
 
@@ -13,16 +13,16 @@ const AppFooter: React.FC = () => {
   const classes = useStyles()
   return (
     <Box
-      height="60px"
+      height="70px"
       display="flex"
       justifyContent="center"
       alignItems="center"
       className={classes.root}
     >
       {links.map(({ label, url, icon: Icon }) => (
-        <Link href={url} title={label}>
+        <IconButton href={url} target="_blank" title={label}>
           <Icon fontSize="large" color="primary" />
-        </Link>
+        </IconButton>
       ))}
     </Box>
   )

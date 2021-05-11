@@ -3,6 +3,7 @@ import data from '../_tokenContract.json'
 import {
   Box,
   Divider,
+  IconButton,
   Link,
   List,
   ListItem,
@@ -66,11 +67,11 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ open, toggle }) => {
         ))}
       </List>
       <Divider className={classes.divider} />
-      <Box display="flex" justifyContent="center">
+      <Box mt={-1} display="flex" justifyContent="center">
         {socialLinks.map(({ label, url, icon: Icon }) => (
-          <Link href={url} title={label}>
+          <IconButton href={url} target="_blank" title={label}>
             <Icon fontSize="large" color="secondary" />
-          </Link>
+          </IconButton>
         ))}
       </Box>
     </SwipeableDrawer>
