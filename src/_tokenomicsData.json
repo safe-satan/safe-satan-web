@@ -1,5 +1,18 @@
 {
-  "supply": "1T",
+  "cards": [
+    {
+      "title": "7T Supply",
+      "subtext": "40% of the entire supply will be burned on launch"
+    },
+    {
+      "title": "Charity Fund",
+      "subtext": "1% of every transaction is immediately deposited into the wallet of coolearth.org"
+    },
+    {
+      "title": "7% Tax",
+      "subtext": "3% to holders, 3% to liquidity, 1% directly to charity"
+    }
+  ],
   "split": [
     {
       "color": "#8D3B72",

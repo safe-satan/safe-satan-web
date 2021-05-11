@@ -16,6 +16,8 @@ import sealsSwimming from '../images/seals-swimming.png'
 
 import Section from '../Section'
 
+const imgs = [sealsSwimming, sealApproval, twoSeals];
+
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
     display: 'flex',
@@ -57,8 +59,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   }
 }))
 
+const { cards, split } = data
+
 const SectionTokenomics: React.FC = () => {
-  const { supply, split } = data
   const [selected, setSelected] = useState(-1)
   const classes = useStyles();
 
@@ -66,56 +69,27 @@ const SectionTokenomics: React.FC = () => {
     <Section id="tokenomics" title="Tokenomics">
       <div className={classes.container}>
         <div className={classes.cards}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Seal of Approval"
-                height="140"
-                image={sealApproval}
-                title="Seal of Approval"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Supply: {supply} tokens
-              </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Seal of Approval"
-                height="140"
-
-                image={twoSeals}
-                title="Seal of Approval"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Tax: etc etc
-              </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Seal of Approval"
-                height="140"
-
-                image={sealsSwimming}
-                title="Seal of Approval"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  More info
-              </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
+          {cards.map(({ title, subtext }, index) => (
+            <Card className={classes.card} elevation={4}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="Seal of Approval"
+                  height="140"
+                  image={imgs[index]}
+                  title="Seal of Approval"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {title}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    {subtext}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          ))}
         </div>
         <PieChart
           animate
