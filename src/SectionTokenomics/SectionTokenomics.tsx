@@ -48,6 +48,8 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     [breakpoints.down('xs')]: {
       flexDirection: 'column',
       width: '100%',
+      marginLeft: 0,
+      marginRight: 0,
     },
   },
   '@keyframes slide-in': {

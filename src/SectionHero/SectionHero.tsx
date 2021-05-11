@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, makeStyles } from '@material-ui/core'
 import heroImage from '../images/seal-hero.jpg'
-import Countdown from '../Countdown';
+import Countdown from '../Countdown'
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   root: {
@@ -20,13 +20,16 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     },
   },
   countdown: {
-
     position: 'absolute',
     top: 200,
     left: 0,
     right: 0,
     margin: '0 auto',
-  }
+
+    [breakpoints.down('xs')]: {
+      top: 100,
+    },
+  },
 }))
 
 const SectionHero: React.FC = () => {

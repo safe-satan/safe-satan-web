@@ -13,7 +13,8 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     opacity: 0,
     transition: `opacity ${duration}ms ease-in-out`,
     [breakpoints.down('xs')]: {
-      margin: `${spacing(4)}px ${spacing(2)}px 0`,
+      width: '99vw',
+      margin: `0 auto`,
     },
   },
   entered: { opacity: 1 },
@@ -23,7 +24,7 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     paddingTop: spacing(8),
     marginTop: spacing(8) * -1,
     marginBottom: spacing(3),
-    textAlign: 'center'
+    textAlign: 'center',
   },
   children: {
     minHeight: '360px',
