@@ -10,7 +10,6 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     margin: `${spacing(4)}px auto 0`,
     width: '80vw',
     maxWidth: '1080px',
-    minHeight: '360px',
     opacity: 0,
     transition: `opacity ${duration}ms ease-in-out`,
     [breakpoints.down('xs')]: {
@@ -24,8 +23,10 @@ const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     paddingTop: spacing(8),
     marginTop: spacing(8) * -1,
     marginBottom: spacing(3),
+    textAlign: 'center'
   },
   children: {
+    minHeight: '360px',
     '&>*:not(:first-of-type)': {
       marginTop: spacing(3),
     },
@@ -55,8 +56,8 @@ const Section: React.FC<SectionProps> = ({ id, title, children }) => {
           {title}
         </Typography>
       )}
-      <Waypoint onEnter={() => setEntered(true)} />
       <div className={classes.children}>{entered && children}</div>
+      <Waypoint onEnter={() => setEntered(true)} />
       <Divider className={classes.divider} />
     </Container>
   )
