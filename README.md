@@ -1,6 +1,6 @@
 # [View the site live here](http://safeseal.finance)
 
-- Site deployment is done with the `yarn deploy` script
+- Site deployment is done by commiting and pushing to `master` branch
 
 # Modifying Data
 
