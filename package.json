@@ -2,7 +2,7 @@
   "name": "safe-seal-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://wack-overflow.github.io/safe-seal-web",
+  "homepage": "http://safeseal.finance",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
