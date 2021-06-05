@@ -33,6 +33,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
 const Countdown: React.FC<{ className?: string }> = ({ className }) => {
   const classes = useStyles()
 
+  const date = new Date(countdownData.date);
+  const isPast = date.getTime() - Date.now() < 0;
+
   return (
     <Box
       className={clsx(className, classes.overlay)}
@@ -40,48 +43,55 @@ const Countdown: React.FC<{ className?: string }> = ({ className }) => {
       flexDirection="column"
       alignItems="center"
     >
-      <Typography variant="h4">{countdownData.title}</Typography>
-      <CountdownBase
-        date={new Date(countdownData.date)}
-        renderer={({ days, hours, minutes, seconds, completed }) => {
-          if (completed) {
-            return <BuyButton />
-          } else {
-            return (
-              <Box display="flex">
-                <Typography
-                  variant="h5"
-                  component="span"
-                  className={classes.countdownItem}
-                >
-                  {days}d
-                </Typography>
-                <Typography
-                  variant="h5"
-                  component="span"
-                  className={classes.countdownItem}
-                >
-                  {hours}h
-                </Typography>
-                <Typography
-                  variant="h5"
-                  component="span"
-                  className={classes.countdownItem}
-                >
-                  {minutes}m
-                </Typography>
-                <Typography
-                  variant="h5"
-                  component="span"
-                  className={classes.countdownItem}
-                >
-                  {seconds}s
-                </Typography>
-              </Box>
-            )
-          }
-        }}
-      />
+      {isPast ? (
+        <Typography variant="h4">{countdownData.completedTitle}</Typography>
+      ) : (
+        <>
+          <Typography variant="h4">{countdownData.title}</Typography>
+          <CountdownBase
+            date={date}
+            renderer={({ days, hours, minutes, seconds, completed }) => {
+              if (completed) {
+                return <BuyButton />
+              } else {
+                return (
+                  <Box display="flex">
+                    <Typography
+                      variant="h5"
+                      component="span"
+                      className={classes.countdownItem}
+                    >
+                      {days}d
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      component="span"
+                      className={classes.countdownItem}
+                    >
+                      {hours}h
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      component="span"
+                      className={classes.countdownItem}
+                    >
+                      {minutes}m
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      component="span"
+                      className={classes.countdownItem}
+                    >
+                      {seconds}s
+                    </Typography>
+                  </Box>
+                )
+              }
+            }}
+          />
+        </>
+      )}
+
     </Box>
   )
 }
