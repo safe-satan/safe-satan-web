@@ -1,4 +1,4 @@
-# [View the site live here](http://safeseal.finance)
+# [View the site live here https://safe-satan-web.vercel.app/](https://safe-satan-web.vercel.app/)
 
 - Site deployment is done by commiting and pushing to `master` branch
 
