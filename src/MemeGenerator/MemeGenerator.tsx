@@ -72,11 +72,11 @@ const useStyles = makeStyles(({ spacing }) => ({
     position: 'relative',
     width: '59%',
     margin: 'auto',
-    maxHeight: 700,
-    maxWidth: 700,
 
     '&>img': {
       width: '100%',
+      maxHeight: 700,
+      maxWidth: 700,
     },
     '& h2': {
       position: 'absolute',
@@ -253,7 +253,7 @@ const MemeGenerator: React.FC<MemeGeneratorProps> = ({
         {!selectedMeme
           ? ''
           : texts.map((text) => (
-              <Rnd enableResizing>
+              <Rnd enableResizing bounds="parent">
                 <h2 style={fontStyle} className={classes.text}>
                   {text}
                 </h2>
