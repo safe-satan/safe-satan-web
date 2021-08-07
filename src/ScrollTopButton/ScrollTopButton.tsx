@@ -1,6 +1,6 @@
-import React from 'react'
-import { Fab, makeStyles, useScrollTrigger, Zoom } from '@material-ui/core'
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
+import React from 'react';
+import { Fab, makeStyles, useScrollTrigger, Zoom } from '@material-ui/core';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,14 +8,14 @@ const useStyles = makeStyles((theme) => ({
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
-}))
+}));
 
 const ScrollTop: React.FC = () => {
-  const classes = useStyles()
+  const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
-  })
+  });
 
   return (
     <Zoom in={trigger}>
@@ -35,7 +35,7 @@ const ScrollTop: React.FC = () => {
         </Fab>
       </div>
     </Zoom>
-  )
-}
+  );
+};
 
-export default ScrollTop
+export default ScrollTop;

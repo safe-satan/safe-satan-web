@@ -1,6 +1,6 @@
-import React from 'react'
-import { Typography } from '@material-ui/core'
-import Section from '../Section'
+import React from 'react';
+import { Typography } from '@material-ui/core';
+import Section from '../Section';
 
 const SectionAbout: React.FC = () => (
   <Section id="about" title="About SafeSeal">
@@ -52,5 +52,5 @@ const SectionAbout: React.FC = () => (
       diam sollicitudin tempor id.
     </Typography>
   </Section>
-)
-export default SectionAbout
+);
+export default SectionAbout;

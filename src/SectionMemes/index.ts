@@ -1,1 +1,1 @@
-export { default } from "./SectionMemes";
+export { default } from './SectionMemes';

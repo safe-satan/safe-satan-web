@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button } from '@material-ui/core'
-import data from '../_tokenContract.json'
+import React from 'react';
+import { Button } from '@material-ui/core';
+import data from '../_tokenContract.json';
 
 const BuyButton: React.FC = () => (
   <Button
@@ -11,6 +11,6 @@ const BuyButton: React.FC = () => (
   >
     Buy on PancakeSwap
   </Button>
-)
+);
 
-export default BuyButton
+export default BuyButton;

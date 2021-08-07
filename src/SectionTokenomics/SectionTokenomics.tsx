@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {
   Card,
   CardActionArea,
@@ -6,17 +6,17 @@ import {
   CardContent,
   makeStyles,
   Typography,
-} from '@material-ui/core'
-import { PieChart } from 'react-minimal-pie-chart'
-import data from '../_tokenomicsData.json'
+} from '@material-ui/core';
+import { PieChart } from 'react-minimal-pie-chart';
+import data from '../_tokenomicsData.json';
 
-import twoSeals from '../images/two-cute-seals.jpg'
-import sealApproval from '../images/sealapproval.jpg'
-import sealsSwimming from '../images/seals-swimming.png'
+import twoSeals from '../images/two-cute-seals.jpg';
+import sealApproval from '../images/sealapproval.jpg';
+import sealsSwimming from '../images/seals-swimming.png';
 
-import Section from '../Section'
+import Section from '../Section';
 
-const imgs = [sealsSwimming, sealApproval, twoSeals]
+const imgs = [sealsSwimming, sealApproval, twoSeals];
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   container: {
@@ -60,13 +60,13 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       transform: 'translateY(0)',
     },
   },
-}))
+}));
 
-const { cards, split } = data
+const { cards, split } = data;
 
 const SectionTokenomics: React.FC = () => {
-  const [selected, setSelected] = useState(-1)
-  const classes = useStyles()
+  const [selected, setSelected] = useState(-1);
+  const classes = useStyles();
 
   return (
     <Section id="tokenomics" title="Tokenomics">
@@ -123,6 +123,6 @@ const SectionTokenomics: React.FC = () => {
         />
       </div>
     </Section>
-  )
-}
-export default SectionTokenomics
+  );
+};
+export default SectionTokenomics;

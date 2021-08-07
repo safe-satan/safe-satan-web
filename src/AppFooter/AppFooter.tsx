@@ -1,16 +1,16 @@
-import React from 'react'
-import { Box, IconButton, makeStyles } from '@material-ui/core'
+import React from 'react';
+import { Box, IconButton, makeStyles } from '@material-ui/core';
 
-import links from '../_socialLinks'
+import links from '../_socialLinks';
 
 const useStyles = makeStyles(({ palette }) => ({
   root: {
     backgroundColor: palette.secondary.main,
   },
-}))
+}));
 
 const AppFooter: React.FC = () => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <Box
       height="70px"
@@ -25,6 +25,6 @@ const AppFooter: React.FC = () => {
         </IconButton>
       ))}
     </Box>
-  )
-}
-export default AppFooter
+  );
+};
+export default AppFooter;

@@ -1,9 +1,9 @@
-import { Box, makeStyles, Typography } from '@material-ui/core'
-import clsx from 'clsx'
-import CountdownBase from 'react-countdown'
+import { Box, makeStyles, Typography } from '@material-ui/core';
+import clsx from 'clsx';
+import CountdownBase from 'react-countdown';
 
-import BuyButton from '../BuyButton'
-import countdownData from '../_countdownData.json'
+import BuyButton from '../BuyButton';
+import countdownData from '../_countdownData.json';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   overlay: {
@@ -28,10 +28,10 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     borderRadius: 5,
     padding: spacing(1),
   },
-}))
+}));
 
 const Countdown: React.FC<{ className?: string }> = ({ className }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const date = new Date(countdownData.date);
   const isPast = date.getTime() - Date.now() < 0;
@@ -52,7 +52,7 @@ const Countdown: React.FC<{ className?: string }> = ({ className }) => {
             date={date}
             renderer={({ days, hours, minutes, seconds, completed }) => {
               if (completed) {
-                return <BuyButton />
+                return <BuyButton />;
               } else {
                 return (
                   <Box display="flex">
@@ -85,15 +85,14 @@ const Countdown: React.FC<{ className?: string }> = ({ className }) => {
                       {seconds}s
                     </Typography>
                   </Box>
-                )
+                );
               }
             }}
           />
         </>
       )}
-
     </Box>
-  )
-}
+  );
+};
 
-export default Countdown
+export default Countdown;

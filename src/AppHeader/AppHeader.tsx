@@ -6,9 +6,9 @@ import {
   Typography,
   useScrollTrigger,
   fade,
-} from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-import BuyButton from '../BuyButton'
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import BuyButton from '../BuyButton';
 
 const useStyles = makeStyles(({ spacing, palette }) => ({
   root: {
@@ -22,20 +22,20 @@ const useStyles = makeStyles(({ spacing, palette }) => ({
   title: {
     flexGrow: 1,
   },
-}))
+}));
 
 export type AppHeaderProps = {
-  onMenuOpen: () => void
-}
+  onMenuOpen: () => void;
+};
 
 const AppHeader: React.FC<AppHeaderProps> = ({ onMenuOpen }) => {
-  const classes = useStyles()
+  const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
-  })
+  });
 
-  const elevation = trigger ? 4 : 0
+  const elevation = trigger ? 4 : 0;
 
   return (
     <AppBar position="sticky" className={classes.root} elevation={elevation}>
@@ -55,7 +55,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ onMenuOpen }) => {
         <BuyButton />
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
-export default AppHeader
+export default AppHeader;

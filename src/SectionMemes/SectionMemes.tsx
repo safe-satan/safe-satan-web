@@ -1,10 +1,10 @@
-import { Box, Typography } from "@material-ui/core";
-import MemeGenerator from "../MemeGenerator";
-import Section from "../Section";
+import { Box, Typography } from '@material-ui/core';
+import MemeGenerator from '../MemeGenerator';
+import Section from '../Section';
 
-const addedMemes = [];
+// const addedMemes = [];
 
-const SectionMemes = () => {
+const SectionMemes: React.FC = () => {
   return (
     <Section id="memes">
       <Box display="flex" flexDirection="column" alignItems="center">

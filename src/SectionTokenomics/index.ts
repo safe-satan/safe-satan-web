@@ -1,1 +1,1 @@
-export { default } from './SectionTokenomics'
+export { default } from './SectionTokenomics';

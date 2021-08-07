@@ -1,5 +1,5 @@
-import React from 'react'
-import data from '../_tokenContract.json'
+import React from 'react';
+import data from '../_tokenContract.json';
 import {
   Box,
   Divider,
@@ -9,14 +9,14 @@ import {
   ListItem,
   SwipeableDrawer,
   makeStyles,
-} from '@material-ui/core'
+} from '@material-ui/core';
 
-import img from '../images/seal-silhouette-purple.png'
-import socialLinks from '../_socialLinks'
-import links from '../_drawerLinks.json'
+import img from '../images/seal-silhouette-purple.png';
+import socialLinks from '../_socialLinks';
+import links from '../_drawerLinks.json';
 
 const iOS =
-  (process as any).browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
+  (process as any).browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 const useStyles = makeStyles(({ spacing }) => ({
   img: {
@@ -31,15 +31,15 @@ const useStyles = makeStyles(({ spacing }) => ({
   divider: {
     margin: `${spacing(3)}px`,
   },
-}))
+}));
 
 export type AppDrawerProps = {
-  open: boolean
-  toggle: (open: boolean) => void
-}
+  open: boolean;
+  toggle: (open: boolean) => void;
+};
 
 const AppDrawer: React.FC<AppDrawerProps> = ({ open, toggle }) => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <SwipeableDrawer
       disableBackdropTransition={!iOS}
@@ -75,6 +75,6 @@ const AppDrawer: React.FC<AppDrawerProps> = ({ open, toggle }) => {
         ))}
       </Box>
     </SwipeableDrawer>
-  )
-}
-export default AppDrawer
+  );
+};
+export default AppDrawer;

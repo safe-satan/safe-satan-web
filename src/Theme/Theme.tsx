@@ -1,4 +1,4 @@
-import { createMuiTheme, ThemeOptions, ThemeProvider } from '@material-ui/core'
+import { createMuiTheme, ThemeOptions, ThemeProvider } from '@material-ui/core';
 
 const themeBase: ThemeOptions = {
   palette: {
@@ -13,12 +13,12 @@ const themeBase: ThemeOptions = {
       main: '#8D3B72',
     },
   },
-}
+};
 
-const theme = createMuiTheme(themeBase)
+const theme = createMuiTheme(themeBase);
 
 const Theme: React.FC = ({ children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
-)
+);
 
-export default Theme
+export default Theme;

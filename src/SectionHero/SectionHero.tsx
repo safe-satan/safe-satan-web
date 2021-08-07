@@ -1,7 +1,7 @@
-import React from 'react'
-import { Container, makeStyles } from '@material-ui/core'
-import heroImage from '../images/seal-hero.jpg'
-import Countdown from '../Countdown'
+import React from 'react';
+import { Container, makeStyles } from '@material-ui/core';
+import heroImage from '../images/seal-hero.jpg';
+import Countdown from '../Countdown';
 
 const useStyles = makeStyles(({ spacing, breakpoints }) => ({
   root: {
@@ -30,15 +30,15 @@ const useStyles = makeStyles(({ spacing, breakpoints }) => ({
       top: 100,
     },
   },
-}))
+}));
 
 const SectionHero: React.FC = () => {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <Container id="hero" className={classes.root}>
       <img src={heroImage} alt="" className={classes.heroImage} />
       <Countdown className={classes.countdown} />
     </Container>
-  )
-}
-export default SectionHero
+  );
+};
+export default SectionHero;
